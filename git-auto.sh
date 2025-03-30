@@ -15,8 +15,11 @@ git add .
 echo "💾 変更をコミットしています..."
 git commit -m "$COMMIT_MESSAGE"
 
-# GitHubにプッシュ
+# 現在のブランチ名を取得
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+# GitHubにプッシュ（アップストリームブランチがない場合は設定する）
 echo "☁️ GitHubにプッシュしています..."
-git push
+git push origin $BRANCH || git push --set-upstream origin $BRANCH
 
 echo "✅ 完了しました！" 
