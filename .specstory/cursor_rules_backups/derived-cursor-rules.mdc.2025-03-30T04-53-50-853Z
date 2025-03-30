@@ -1,0 +1,33 @@
+
+## PROJECT OVERVIEW
+Project FC25.  Initial setup includes Git integration.
+
+## 全て日本語
+このプロジェクトに関する全てのドキュメントは日本語で記述します。
+
+## CODE STYLE
+(To be defined)
+
+## FOLDER ORGANIZATION
+(To be defined)
+
+## TECH STACK
+Git
+
+## PROJECT-SPECIFIC STANDARDS
+(To be defined)
+
+## WORKFLOW & RELEASE RULES
+Git will be used for version control.  Workflow will be defined later.
+
+## REFERENCE EXAMPLES
+(To be defined)
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+(To be defined)
+
+## DEBUGGING
+(To be defined)
+
+## FINAL DOs AND DON'Ts
+Use Git for version control.
