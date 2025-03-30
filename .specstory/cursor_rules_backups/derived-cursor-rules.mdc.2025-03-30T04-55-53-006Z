@@ -1,0 +1,42 @@
+
+## PROJECT OVERVIEW
+Project FC25.  Initial setup includes Git integration.  Linked to GitHub repository: https://github.com/Rim20010801/FC25
+
+## 全て日本語
+このプロジェクトに関する全てのドキュメントは日本語で記述します。
+
+## CODE STYLE
+(To be defined)
+
+## FOLDER ORGANIZATION
+(To be defined)
+
+## TECH STACK
+Git
+
+## PROJECT-SPECIFIC STANDARDS
+(To be defined)
+
+## WORKFLOW & RELEASE RULES
+Git will be used for version control. Workflow includes:
+1. `git add` to stage changes.
+2. `git commit -m "message"` to commit changes.
+3. `git push` to upload to GitHub.
+4. `git pull` to fetch updates from GitHub.
+Resolve merge conflicts before committing and pushing.  Use `git pull origin main --allow-unrelated-histories --no-rebase` to handle merge conflicts with remote repositories.  Set your Git username and email using:
+```
+git config --global user.name "あなたの名前"
+git config --global user.email "あなたのメールアドレス"
+```
+
+## REFERENCE EXAMPLES
+(To be defined)
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+(To be defined)
+
+## DEBUGGING
+(To be defined)
+
+## FINAL DOs AND DON'Ts
+Use Git for version control.  Always resolve merge conflicts before pushing changes to the remote repository. Set your global git username and email.

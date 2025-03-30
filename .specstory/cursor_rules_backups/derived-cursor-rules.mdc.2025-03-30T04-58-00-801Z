@@ -1,0 +1,73 @@
+
+## PROJECT OVERVIEW
+Project FC25.  Initial setup includes Git integration.  Linked to GitHub repository: https://github.com/Rim20010801/FC25
+
+## 全て日本語
+このプロジェクトに関する全てのドキュメントは日本語で記述します。
+
+## CODE STYLE
+(To be defined)
+
+## FOLDER ORGANIZATION
+(To be defined)
+
+## TECH STACK
+Git
+
+## PROJECT-SPECIFIC STANDARDS
+(To be defined)
+
+## WORKFLOW & RELEASE RULES
+Git will be used for version control. Workflow includes:
+1. `git add` to stage changes.
+2. `git commit -m "message"` to commit changes.
+3. `git push` to upload to GitHub.
+4. `git pull` to fetch updates from GitHub.
+Resolve merge conflicts before committing and pushing.  Use `git pull origin main --allow-unrelated-histories --no-rebase` to handle merge conflicts with remote repositories.  Set your Git username and email using:
+```
+git config --global user.name "あなたの名前"
+git config --global user.email "あなたのメールアドレス"
+```
+A `git-auto.sh` script is provided to automate the `git add`, `git commit`, and `git push` process.  See the REFERENCE EXAMPLES section for details.
+
+
+## REFERENCE EXAMPLES
+**git-auto.sh:** This script automates common Git operations.  It can be run with a custom commit message or defaults to "自動更新".
+
+```bash
+#!/bin/bash
+
+# 変更メッセージを引数から取得（デフォルトは「自動更新」）
+COMMIT_MESSAGE=${1:-"自動更新"}
+
+# 現在の状態を表示
+echo "📊 現在の状態:"
+git status
+
+# すべての変更をステージング
+echo "➕ 変更をステージングに追加しています..."
+git add .
+
+# 変更をコミット
+echo "💾 変更をコミットしています..."
+git commit -m "$COMMIT_MESSAGE"
+
+# 現在のブランチ名を取得
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+# GitHubにプッシュ（アップストリームブランチがない場合は設定する）
+echo "☁️ GitHubにプッシュしています..."
+git push origin $BRANCH || git push --set-upstream origin $BRANCH
+
+echo "✅ 完了しました！"
+```
+To use: `./git-auto.sh "your commit message"` or `./git-auto.sh` (for default message). Remember to make the script executable: `chmod +x git-auto.sh`
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+(To be defined)
+
+## DEBUGGING
+(To be defined)
+
+## FINAL DOs AND DON'Ts
+Use Git for version control.  Always resolve merge conflicts before pushing changes to the remote repository. Set your global git username and email. Utilize the `git-auto.sh` script for streamlined workflow.

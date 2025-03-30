@@ -1,3 +1,40 @@
+
+## PROJECT OVERVIEW
+Project FC25.  Initial setup includes Git integration.  Linked to GitHub repository: https://github.com/Rim20010801/FC25
+
+## 全て日本語
+このプロジェクトに関する全てのドキュメントは日本語で記述します。
+
+## CODE STYLE
+(To be defined)
+
+## FOLDER ORGANIZATION
+(To be defined)
+
+## TECH STACK
+Git
+
+## PROJECT-SPECIFIC STANDARDS
+(To be defined)
+
+## WORKFLOW & RELEASE RULES
+Git will be used for version control. Workflow includes:
+1. `git add` to stage changes.
+2. `git commit -m "message"` to commit changes.
+3. `git push` to upload to GitHub.
+4. `git pull` to fetch updates from GitHub.
+Resolve merge conflicts before committing and pushing.  Use `git pull origin main --allow-unrelated-histories --no-rebase` to handle merge conflicts with remote repositories.  Set your Git username and email using:
+```
+git config --global user.name "あなたの名前"
+git config --global user.email "あなたのメールアドレス"
+```
+A `git-auto.sh` script is provided to automate the `git add`, `git commit`, and `git push` process.  See the REFERENCE EXAMPLES section for details.  The script now includes options for displaying diffs, committing specific files, pulling before pushing, and specifying or creating branches.
+
+
+## REFERENCE EXAMPLES
+**git-auto.sh:** This script automates common Git operations.  It can be run with a custom commit message or defaults to "自動更新".  It now includes improved features, such as colored output, help messages, and options for more granular control over the Git workflow.
+
+```bash
 #!/bin/bash
 
 # カラー設定
@@ -102,7 +139,7 @@ git status
 if [ "$DO_PULL" = true ]; then
   echo -e "${YELLOW}⬇️ リモートから最新の変更を取得しています...${NC}"
   git pull origin $CURRENT_BRANCH
-  
+
   # コンフリクトチェック
   if [ $? -ne 0 ]; then
     echo -e "${RED}⚠️ マージコンフリクトが発生したかもしれません。解決してから再度実行してください。${NC}"
@@ -140,4 +177,15 @@ fi
 echo -e "${BLUE}☁️ GitHubにプッシュしています...${NC}"
 git push origin $CURRENT_BRANCH || git push --set-upstream origin $CURRENT_BRANCH
 
-echo -e "${GREEN}✅ 完了しました！${NC}" 
+echo -e "${GREEN}✅ 完了しました！${NC}"
+```
+To use: `./git-auto.sh "your commit message"` or `./git-auto.sh` (for default message). Remember to make the script executable: `chmod +x git-auto.sh`  The script can now also take options: `-h` or `--help` for help, `-d` or `--diff` to show diffs before committing, `-s` or `--specific` to specify files to commit, `-p` or `--pull` to pull before pushing, and `-b` or `--branch` to specify or create a branch.
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+(To be defined)
+
+## DEBUGGING
+(To be defined)
+
+## FINAL DOs AND DON'Ts
+Use Git for version control.  Always resolve merge conflicts before pushing changes to the remote repository. Set your global git username and email. Utilize the `git-auto.sh` script for streamlined workflow.  Refer to the `git-auto.sh` script's help options (`./git-auto.sh -h`) for advanced usage instructions.

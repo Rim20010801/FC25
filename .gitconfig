@@ -1,0 +1,26 @@
+[alias]
+    # 基本コマンド
+    s = status
+    c = commit
+    ca = commit --amend
+    a = add
+    aa = add --all
+    p = push
+    pl = pull
+    co = checkout
+    cb = checkout -b
+    br = branch
+    
+    # ログ表示
+    l = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    
+    # 差分表示
+    d = diff
+    ds = diff --staged
+    
+    # よく使う操作
+    unstage = reset HEAD --
+    discard = checkout --
+    
+    # 自動更新スクリプト
+    auto = !~/Desktop/FC25/git-auto.sh 
