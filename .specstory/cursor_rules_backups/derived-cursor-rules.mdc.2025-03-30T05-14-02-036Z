@@ -1,10 +1,6 @@
----
-description: Cursor rules derived by SpecStory from the project AI interaction history
-globs: *
----
 
 ## PROJECT OVERVIEW
-Project FC25.  Initial setup includes Git integration.  Linked to GitHub repository: https://github.com/Rim20010801/FC25
+Project FC25.  Initial setup includes Git integration.  Linked to GitHub repository: https://github.com/Rim20210801/FC25
 
 ## 全て日本語
 このプロジェクトに関する全てのドキュメントは日本語で記述します。
@@ -32,7 +28,7 @@ Resolve merge conflicts before committing and pushing.  Use `git pull origin mai
 git config --global user.name "あなたの名前"
 git config --global user.email "あなたのメールアドレス"
 ```
-A `git-auto.sh` script is provided to automate the `git add`, `git commit`, and `git push` process.  See the REFERENCE EXAMPLES section for details.  The script now includes options for displaying diffs, committing specific files, pulling before pushing, and specifying or creating branches.  The script also includes colored output and improved help messages.  The script handles merge conflicts more gracefully and provides options for specifying files, pulling before pushing, and working with branches.
+A `git-auto.sh` script is provided to automate the `git add`, `git commit`, and `git push` process.  See the REFERENCE EXAMPLES section for details.  The script now includes options for displaying diffs, committing specific files, pulling before pushing, and specifying or creating branches.  The script also includes colored output and improved help messages.
 
 ## REFERENCE EXAMPLES
 **git-auto.sh:** This script automates common Git operations.  It can be run with a custom commit message or defaults to "自動更新".  It now includes improved features, such as colored output, help messages, and options for more granular control over the Git workflow.  The script handles merge conflicts more gracefully and provides options for specifying files, pulling before pushing, and working with branches.
