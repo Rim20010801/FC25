@@ -1,7 +1,3 @@
----
-description: Cursor rules derived by SpecStory from the project AI interaction history
-globs: *
----
 
 ## PROJECT OVERVIEW
 Project FC25.  Initial setup includes Git integration.  Linked to GitHub repository: https://github.com/Rim20010801/FC25
@@ -192,4 +188,4 @@ To use: `./git-auto.sh "your commit message"` or `./git-auto.sh` (for default me
 (To be defined)
 
 ## FINAL DOs AND DON'Ts
-Use Git for version control.  Always resolve merge conflicts before pushing changes to the remote repository. Set your global git username and email. Utilize the `git-auto.sh` script for streamlined workflow.  Refer to the `git-auto.sh` script's help options (`./git-auto.sh -h`) for advanced usage instructions.  Use the provided Git cheat sheet for common commands and best practices.  Refer to https://sofifa.com/ for player data and information. Also refer to https://www.futbin.com/ for supplementary player data.
+Use Git for version control.  Always resolve merge conflicts before pushing changes to the remote repository. Set your global git username and email. Utilize the `git-auto.sh` script for streamlined workflow.  Refer to the `git-auto.sh` script's help options (`./git-auto.sh -h`) for advanced usage instructions.  Use the provided Git cheat sheet for common commands and best practices.  Refer to https://sofifa.com/ for player data and information.
